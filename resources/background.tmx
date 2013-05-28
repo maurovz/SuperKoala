@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="50" height="15" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="tileSet" tilewidth="16" tileheight="16">
+  <image source="tileSet.png" trans="302f30" width="256" height="256"/>
+  <terraintypes>
+   <terrain name="New Terrain" tile="-1"/>
+  </terraintypes>
+ </tileset>
+ <layer name="Tile Layer 1" width="50" height="15">
+  <data encoding="base64" compression="zlib">
+   eJzt0MVOBEEUheFe4+7u7u7u7p7gToI7CQ5LHJbICyAPyD8Jk3Q6DFWVWZH0Sb7VvV2nqzTt9zzjBa94s7HjAU94wRs+8IUf/G18I3u2Je4/HfbkHR/4xJeNnQhEIgrRiEEs4hBv59mWhCt2yL6PcS8DmchCNnKQizzk/3GObNIVO2Tfx7hXgUpUoRo1qEUd6jX597HGuF8u0aGPAxzhBGe4wBVuglkHOtGFbvSgF33oV3gfa4z77RId+gQgEEEIRghCESaYjWEcE5jEFKYxg1mJ/xZlVLEjAYlIQjJSkIo0wWwFq1jDOjawiS1sYwCDGMIwRhTvsSzRoU8BClGEYpSgFGWC2RGOcYJTnOEcF7jEHOaxgEUsKd7jUKJDnwY0ognNaEEr2gSza9zgFne4xwMe8YQd7GIP+zhQvMeVRIcZM2bM/Ld8A7y7ZPI=
+  </data>
+ </layer>
+ <layer name="Background" width="50" height="15">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T20ND6AAAIB3Awu4AAE=
+  </data>
+ </layer>
+</map>
