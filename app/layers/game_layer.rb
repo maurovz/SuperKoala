@@ -4,7 +4,7 @@ class GameLayer < Joybox::Core::Layer
     @world = World.new gravity: [0.0, -9.8]
     schedule_update do |dt|
       @world.step delta: dt
-      
+
       if @menu_arrow_image.isSelected
         apply_move_action_left
       end

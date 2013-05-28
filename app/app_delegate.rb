@@ -11,7 +11,7 @@ class AppDelegate
     @window.makeKeyAndVisible
 
     @director.push_scene(GameScene.new)
-
+    @director.view.setMultipleTouchEnabled(true)
     true
   end
 end
