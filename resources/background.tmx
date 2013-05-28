@@ -6,14 +6,28 @@
    <terrain name="New Terrain" tile="-1"/>
   </terraintypes>
  </tileset>
- <layer name="Tile Layer 1" width="50" height="15">
-  <data encoding="base64" compression="zlib">
-   eJzt0MVOBEEUheFe4+7u7u7u7p7gToI7CQ5LHJbICyAPyD8Jk3Q6DFWVWZH0Sb7VvV2nqzTt9zzjBa94s7HjAU94wRs+8IUf/G18I3u2Je4/HfbkHR/4xJeNnQhEIgrRiEEs4hBv59mWhCt2yL6PcS8DmchCNnKQizzk/3GObNIVO2Tfx7hXgUpUoRo1qEUd6jX597HGuF8u0aGPAxzhBGe4wBVuglkHOtGFbvSgF33oV3gfa4z77RId+gQgEEEIRghCESaYjWEcE5jEFKYxg1mJ/xZlVLEjAYlIQjJSkIo0wWwFq1jDOjawiS1sYwCDGMIwRhTvsSzRoU8BClGEYpSgFGWC2RGOcYJTnOEcF7jEHOaxgEUsKd7jUKJDnwY0ognNaEEr2gSza9zgFne4xwMe8YQd7GIP+zhQvMeVRIcZM2bM/Ld8A7y7ZPI=
-  </data>
- </layer>
+ <tileset firstgid="257" name="btnRoundBlue" tilewidth="16" tileheight="16">
+  <image source="btnRoundBlue.png" trans="302f30" width="35" height="35"/>
+ </tileset>
+ <tileset firstgid="261" name="imgres" tilewidth="16" tileheight="16">
+  <image source="imgres.jpeg" trans="302f30" width="259" height="194"/>
+ </tileset>
+ <tileset firstgid="453" name="tileSet" tilewidth="16" tileheight="16">
+  <image source="tileSet.png" width="256" height="256"/>
+ </tileset>
  <layer name="Background" width="50" height="15">
   <data encoding="base64" compression="zlib">
-   eJztwTEBAAAAwqD1T20ND6AAAIB3Awu4AAE=
+   eJztwzENAAAMA6DORf0rrY0dkNBLqqqqvj7bsUk/
+  </data>
+ </layer>
+ <layer name="Mid" width="50" height="15">
+  <data encoding="base64" compression="zlib">
+   eJztlEluAjEQRW2TdRjPlcAFgCwYLgDhlEkY1oxZA0lYA68jtWQ5bVPdtBQWPOlJbqnKXb8YlLp9OkapLvawb2Q9T9Q9Yx0bTk+W+/JgwLuG+Ioj4Xub1LWwjS9Oj+Q+SdbQrm4FSdbQrlyyZLZ7LvXntdNLn580s3tP3OP2u3Vpdmrj5k/73ffllt6T5beWRNb8ec9x5861vGml3vEDxzjBKc70f0/2l9CMc84LXOIK17jBT+3PKMku3U+aPSbNGLPlvMM9fuE3/uBB+zOGskv2YyOti0iaMebI+RQ98/+m0WABH4w/Yyi7ZD820rpfEmaMeeRcxBKWsYJVrBl/xlB2yX5spHURZ6LnnV0=
+  </data>
+ </layer>
+ <layer name="Front" width="50" height="15">
+  <data encoding="base64" compression="zlib">
+   eJzt1EVvw0AQhmF7y8zMzMygNq1U7t8uMzMzM+PbQy/bjRNbSk/+pOcQ7UxmVitZ0+zYseMsk7q52impfo7f8yb+w87/ZYB3GcQQhjGCUYxhHBOKd7PS4+ksMHMRS1jGClaxhnVsKHay0uPpHDDzEEc4xglOcYZzXCh2stLj6Tww8xFPeMYLXvGGd3wodrLSo8rvN2gaM5jV1d8gd+p8hKb5wg/+CEAgghCMEPF3vtkeZ3tsYgvb2MEu9rAv3cOduhhmxiIO8UhAIpKQjBTFPcz2ONvjEle4xg1ucYd76R5GdanMSkM6MpCJfBSgUBi/ZQ7nuciTeopQjBLh3h6f+PrZmXodAl7wlvqN6kpRhnJUoBL1aECjMH7LGs5rUSf1NKEZWcgWrvcIRRjCEYFIRCFauodRXQta4UAb2tGNHvQK47fs4LwTXVJPH/pRhWrheo9v4h+g2w==
   </data>
  </layer>
 </map>

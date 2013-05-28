@@ -2,7 +2,6 @@ class GameLayer < Joybox::Core::Layer
 
   def on_enter
     @world = World.new gravity: [0.0, -9.8]
-
     schedule_update do |dt|
       @world.step delta: dt
       
@@ -13,25 +12,36 @@ class GameLayer < Joybox::Core::Layer
       if @menu_arrow_image2.isSelected
         apply_move_action_right
       end
+
+      if @koalio.position.y < -30
+        second_scene = GameScene.new
+        director << second_scene
+        end
+
     end
 
-    floorBodySize = Sprite.new file_name: 'map.bmp'
+    floorBodySize = Sprite.new file_name: 'floor.png'
 
-    floorBody = @world.new_body position: [0, 0] do
-      polygon_fixture box: [(floorBodySize.boundingBox.size.width / 2 - 4), (floorBodySize.boundingBox.size.height / 2) - 4], friction: 0.3, density: 1.0
+    floorBody = @world.new_body position: [1200, (floorBodySize.boundingBox.size.height / 2)] do
+      polygon_fixture box: [(floorBodySize.boundingBox.size.width / 2 - 15), (floorBodySize.boundingBox.size.height / 2) - 4], friction: 0.3, density: 1.0
     end
 
-    @level_floor = PhysicsSprite.new file_name: 'map.bmp', body: floorBody
+    floorBody2 = @world.new_body position: [210, (floorBodySize.boundingBox.size.height / 2)] do
+      polygon_fixture box: [(floorBodySize.boundingBox.size.width / 2 - 15), (floorBodySize.boundingBox.size.height / 2) - 4], friction: 0.3, density: 1.0
+    end
+
+    @level_floor = PhysicsSprite.new file_name: 'floor.png', body: floorBody
+    @level_floor2 = PhysicsSprite.new file_name: 'floor.png', body: floorBody2
 
     self << @level_floor
+    self << @level_floor2
 
-    @koalio = new_koalio_sprite    
+    @koalio = new_koalio_sprite  
     self << @koalio
 
     init_controls
     layout_menus
   end
-
 
   def init_controls
 
@@ -64,25 +74,25 @@ class GameLayer < Joybox::Core::Layer
       menu_items << menu_image2 
 
       menuRight = Menu.new items: menu_items,
-      position: [400, 20]
+      position: [400, 37]
       menuRight.align_items_horizontally_with_padding(20)
       self.add_child(menuRight, z: 1)
 
 
       menu_arrow_items = Array.new
 
-      @menu_arrow_image = MenuImage.new image_file_name: "btnRoundBlue.png", selected_image_file_name: "btnRoundBlue.png" do |menu_item|
+      @menu_arrow_image = MenuImage.new image_file_name: "LeftArrow.png", selected_image_file_name: "LeftArrow.png" do |menu_item|
           left_arrow_menu_button
       end
       menu_arrow_items << @menu_arrow_image 
 
-      @menu_arrow_image2 = MenuImage.new image_file_name: "btnRoundPurple.png", selected_image_file_name: "btnRoundPurple.png" do |menu_item|
+      @menu_arrow_image2 = MenuImage.new image_file_name: "RightArrow.png", selected_image_file_name: "RightArrow.png" do |menu_item|
           right_arrow_menu_button
       end
       menu_arrow_items << @menu_arrow_image2 
 
       menuLeft = Menu.new items: menu_arrow_items,
-      position: [50, 20]
+      position: [80, 37]
       menuLeft.align_items_horizontally_with_padding(20)
       self.add_child(menuLeft, z: 1)
 
@@ -126,6 +136,7 @@ class GameLayer < Joybox::Core::Layer
     @banana_sprite
   end
 
+
   def new_koalio_sprite
     koalio_body = @world.new_body position: [100, 150], type: KDynamicBodyType do
 
@@ -140,16 +151,17 @@ class GameLayer < Joybox::Core::Layer
     @koalio_sprite
   end
 
-
   def apply_move_action_left
        @koalio.body.apply_force force: [0,0.1]
        @level_floor.position = [@level_floor.position[0] + 2, @level_floor.position.y]
+       @level_floor2.position = [@level_floor2.position[0] + 2, @level_floor2.position.y]
   end
 
 
   def apply_move_action_right
        @koalio.body.apply_force force: [0,0.1]
        @level_floor.position = [@level_floor.position[0] - 2, @level_floor.position.y]
+       @level_floor2.position = [@level_floor2.position[0] - 2, @level_floor2.position.y]
   end
 
 
