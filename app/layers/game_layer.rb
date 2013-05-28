@@ -142,13 +142,13 @@ class GameLayer < Joybox::Core::Layer
 
 
   def apply_move_action_left
-       @koalio.body.apply_force force: (1)
+       @koalio.body.apply_force force: [0,0.1]
        @level_floor.position = [@level_floor.position[0] + 2, @level_floor.position.y]
   end
 
 
   def apply_move_action_right
-       @koalio.body.apply_force force: (1)
+       @koalio.body.apply_force force: [0,0.1]
        @level_floor.position = [@level_floor.position[0] - 2, @level_floor.position.y]
   end
 
