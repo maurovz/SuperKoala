@@ -77,7 +77,17 @@ class GameLayer < Joybox::Core::Layer
        if collision_body == @enemy_gorilla.body
          second_scene = EndScene.new
          director << second_scene
+       end
+
+      @world.when_collide @cactus_body do |collision_body, is_touching|
+      if collision_body == @enemy_gorilla.body
+        if  @player_front
+          @enemy_gorilla.body.apply_force force: [30000, 15000]
+        else
+          @enemy_gorilla.body.apply_force force: [-30000, 15000]
+        end
       end
+    end
       end
 
       if @menu_arrow_image.isSelected
@@ -170,9 +180,6 @@ class GameLayer < Joybox::Core::Layer
     end 
     @cactus_sprite = PhysicsSprite.new file_name: 'cactus.png', body: @cactus_body
 
-    @world.when_collide @cactus_body do |collision_body, is_touching|
-    end
-
     @cactus_sprite
   end
 
@@ -235,7 +242,6 @@ class GameLayer < Joybox::Core::Layer
 
     i = 0
     while i < @moving_objects.count  do
-       puts @moving_objects.count
       @ground_object = @moving_objects.objectAtIndex(i)
       @ground_object.position = [@ground_object.position[0] - 2, @ground_object.position.y]
       i +=1
