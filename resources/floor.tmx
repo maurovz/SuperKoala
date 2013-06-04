@@ -6,7 +6,7 @@
  <tileset firstgid="257" name="ts_2" tilewidth="16" tileheight="16">
   <image source="ts_2.png" width="472" height="480"/>
  </tileset>
- <layer name="FloorBackground" width="50" height="5" visible="0">
+ <layer name="FloorBackground" width="50" height="5">
   <data encoding="base64" compression="zlib">
    eJylkksKADEIQ8tcv5k7z2wKJeRpoYtQsfETdT5j6Md7gHkBWQ5B3uX312NSbwo8md85XZ3Fdw3Jdk17bJoB/VW2IG96u9mTnXaSajm3qkP9+U6o/05XpYN2eKqfdkc3sCPpr+Za3QnpTTfosR+5cYp5
   </data>
